@@ -156,6 +156,12 @@ button {
   fill: var(--color-accent);
 }
 
+.logo-laser-dot {
+  fill: var(--color-accent);
+  filter: drop-shadow(0 0 3px var(--color-accent)) drop-shadow(0 0 7px var(--color-accent));
+  opacity: 0;
+}
+
 .logo-svg-text {
   font-family: var(--font-display);
   font-weight: 700;
@@ -183,6 +189,9 @@ button {
   .nav-logo .logo-reveal-group {
     animation: logo-reveal 1s ease-out 1.5s forwards;
   }
+  .nav-logo .logo-laser-dot {
+    animation: logo-laser-travel 1.3s ease-out 0.1s forwards;
+  }
 
   .hero-logo .logo-diamond {
     animation: logo-draw 1.6s ease-out 0.3s forwards;
@@ -193,11 +202,15 @@ button {
   .hero-logo .logo-reveal-group {
     animation: logo-reveal 1.2s ease-out 2s forwards;
   }
+  .hero-logo .logo-laser-dot {
+    animation: logo-laser-travel 1.6s ease-out 0.3s forwards;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .logo-svg-draw { stroke-dashoffset: 0; }
   .logo-reveal-group { clip-path: inset(0 0 0 0); }
+  .logo-laser-dot { display: none; }
 }
 
 @keyframes logo-draw {
@@ -206,6 +219,15 @@ button {
 
 @keyframes logo-reveal {
   to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes logo-laser-travel {
+  0%    { transform: translate(0px, 0px);       opacity: 1; }
+  30.4% { transform: translate(155px, 205px); }
+  50%   { transform: translate(0px, 265px); }
+  69.6% { transform: translate(-155px, 205px); }
+  96%   { opacity: 1; }
+  100%  { transform: translate(0px, 0px);       opacity: 0; }
 }
 
 .nav-links {
