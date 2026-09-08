@@ -144,7 +144,7 @@ button {
 .logo-svg-draw {
   fill: none;
   stroke: var(--color-ink);
-  stroke-width: 2.5;
+  stroke-width: 3.2;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 1;
@@ -152,11 +152,15 @@ button {
   vector-effect: non-scaling-stroke;
 }
 
+.logo-svg-fill-accent {
+  fill: var(--color-accent);
+}
+
 .logo-svg-text {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 1.5px;
+  font-size: 24px;
+  letter-spacing: 1px;
   fill: var(--color-ink);
 }
 
@@ -165,23 +169,29 @@ button {
 }
 
 .nav-logo {
-  width: 52px;
-  height: 52px;
+  width: 58px;
+  height: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .nav-logo .logo-diamond {
     animation: logo-draw 1.3s ease-out 0.1s forwards;
   }
+  .nav-logo .logo-ridge {
+    animation: logo-draw 0.5s ease-out 1s forwards;
+  }
   .nav-logo .logo-reveal-group {
-    animation: logo-reveal 1.1s ease-out 1.2s forwards;
+    animation: logo-reveal 1s ease-out 1.5s forwards;
   }
 
   .hero-logo .logo-diamond {
     animation: logo-draw 1.6s ease-out 0.3s forwards;
   }
+  .hero-logo .logo-ridge {
+    animation: logo-draw 0.6s ease-out 1.4s forwards;
+  }
   .hero-logo .logo-reveal-group {
-    animation: logo-reveal 1.3s ease-out 1.6s forwards;
+    animation: logo-reveal 1.2s ease-out 2s forwards;
   }
 }
 
@@ -324,8 +334,8 @@ button {
 
 .hero-logo {
   grid-column: 1 / -1;
-  width: clamp(200px, 32vw, 340px);
-  aspect-ratio: 400 / 480;
+  width: clamp(220px, 34vw, 360px);
+  aspect-ratio: 400 / 340;
   margin-bottom: var(--space-md);
 }
 
