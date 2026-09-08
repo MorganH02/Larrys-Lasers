@@ -305,7 +305,7 @@ button {
    ========================================================================== */
 
 .hero {
-  padding: var(--space-xl) 0 var(--space-lg);
+  padding: 3rem 0 var(--space-lg);
 }
 
 .hero .wrap {
@@ -353,7 +353,7 @@ button {
   grid-column: 1 / -1;
   width: clamp(220px, 34vw, 360px);
   aspect-ratio: 400 / 340;
-  margin-bottom: var(--space-md);
+  margin: 0 auto var(--space-md);
 }
 
 .collage-1 { grid-column: span 3; aspect-ratio: 4 / 3; transform: rotate(-1deg); }
