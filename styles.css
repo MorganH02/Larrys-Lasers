@@ -346,9 +346,9 @@ button {
 .collage-5 { grid-column: span 2; aspect-ratio: 1 / 1; transform: rotate(1deg); }
 
 @media (max-width: 800px) {
+  .hero { padding-top: 2.5rem; }
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-collage { order: -1; }
-  .hero-logo { order: -2; width: clamp(180px, 55vw, 300px); margin: 0 auto var(--space-md); }
+  .hero-logo { order: -2; width: clamp(180px, 55vw, 300px); margin: 0 auto var(--space-sm); }
 }
 
 /* ==========================================================================

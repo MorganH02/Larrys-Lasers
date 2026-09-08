@@ -1,4 +1,4 @@
-# Larry's Lasers — Business Website
+# D-Side Designs — Business Website
 
 **Live site:** https://morganh02.github.io/Larrys-Lasers/
 
