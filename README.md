@@ -1,6 +1,6 @@
 # Larry's Lasers — Business Website
 
-**Live site:** https://morganh02.github.io/larrys-lasers/
+**Live site:** https://morganh02.github.io/Larrys-Lasers/
 
 A full business website built as a surprise for a close friend who's starting a laser engraving business — coasters, wood, leather, metal, stickers, custom photo work. Designed, built, and deployed end-to-end from a phone.
 
