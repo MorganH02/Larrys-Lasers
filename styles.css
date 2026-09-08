@@ -181,10 +181,10 @@ button {
 
 @media (prefers-reduced-motion: no-preference) {
   .wordmark-burn {
-    animation: engrave-reveal 1.3s ease-out 0.15s forwards;
+    animation: engrave-reveal 2.6s ease-out 0.15s forwards;
   }
   .wordmark::after {
-    animation: engrave-beam 1.3s ease-out 0.15s forwards;
+    animation: engrave-beam 2.6s ease-out 0.15s forwards;
   }
 }
 
