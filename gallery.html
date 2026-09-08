@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery — D-Side Designs</title>
+<title>Gallery — D-Sided Designs</title>
 <meta name="description" content="Recent laser engraving work — coasters, keychains, custom portraits, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,17 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="nav-logo-link" aria-label="D-Side Designs, home">
-      <span class="logo-mark nav-logo">
-        <img class="logo-mark-base" src="logo-dside-tight.jpg" alt="">
-        <img class="logo-mark-burn" src="logo-dside-tight.jpg" alt="" aria-hidden="true">
-      </span>
+    <a href="index.html" class="nav-logo-link" aria-label="D-Sided Designs, home">
+      <svg class="logo-svg-mark nav-logo" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <path class="logo-svg-draw logo-diamond" pathLength="1" d="M200,20 L375,260 L200,460 L25,260 Z"/>
+        <g class="logo-reveal-group">
+          <path class="logo-svg-fill-accent" d="M200,95 C232,116 248,155 242,192 C239,208 224,219 200,224 L200,95 Z"/>
+          <circle class="logo-svg-dot" cx="200" cy="228" r="9"/>
+          <line class="logo-svg-stem" x1="200" y1="240" x2="200" y2="285"/>
+          <text class="logo-svg-text" x="200" y="352" text-anchor="middle">D-SIDED DESIGNS</text>
+        </g>
+        <path class="logo-svg-draw logo-emblem" pathLength="1" d="M200,95 C232,116 248,155 242,192 C239,208 224,219 200,224 C176,219 161,208 158,192 C152,155 168,116 200,95 Z"/>
+      </svg>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -101,7 +107,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>D-Side Designs — local laser engraving</span>
+    <span>D-Sided Designs — local laser engraving</span>
     <span>&copy; 2026</span>
   </div>
 </footer>

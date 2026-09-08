@@ -136,71 +136,89 @@ button {
   height: 72px;
 }
 
-.logo-mark {
-  position: relative;
+.logo-svg-mark {
   display: block;
-  line-height: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
-.logo-mark img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.logo-svg-draw {
+  fill: none;
+  stroke: var(--color-ink);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  vector-effect: non-scaling-stroke;
 }
 
-.logo-mark-base {
-  opacity: 0.3;
-  filter: grayscale(35%);
+.logo-svg-fill-accent {
+  fill: var(--color-accent);
 }
 
-.logo-mark-burn {
-  position: absolute;
-  top: 0;
-  left: 0;
+.logo-svg-dot {
+  fill: var(--color-accent);
+}
+
+.logo-svg-stem {
+  fill: none;
+  stroke: var(--color-ink-muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 3 7;
+  vector-effect: non-scaling-stroke;
+}
+
+.logo-svg-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 1.5px;
+  fill: var(--color-ink);
+}
+
+.logo-reveal-group {
   clip-path: inset(0 100% 0 0);
-}
-
-.logo-mark::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 2px;
-  height: 100%;
-  background: var(--color-accent);
-  box-shadow: 0 0 8px 2px var(--color-accent);
-  opacity: 0;
 }
 
 .nav-logo {
   width: 52px;
   height: 52px;
-  border-radius: 3px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .nav-logo .logo-mark-burn {
-    animation: engrave-reveal 2.6s ease-out 0.15s forwards;
+  .nav-logo .logo-diamond {
+    animation: logo-draw 1.3s ease-out 0.1s forwards;
   }
-  .nav-logo::after {
-    animation: engrave-beam 2.6s ease-out 0.15s forwards;
+  .nav-logo .logo-emblem {
+    animation: logo-draw 0.7s ease-out 0.7s forwards;
+  }
+  .nav-logo .logo-reveal-group {
+    animation: logo-reveal 1.1s ease-out 1.3s forwards;
+  }
+
+  .hero-logo .logo-diamond {
+    animation: logo-draw 1.6s ease-out 0.3s forwards;
+  }
+  .hero-logo .logo-emblem {
+    animation: logo-draw 0.9s ease-out 1.6s forwards;
+  }
+  .hero-logo .logo-reveal-group {
+    animation: logo-reveal 1.3s ease-out 2.3s forwards;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .logo-mark-burn { clip-path: inset(0 0 0 0); }
+  .logo-svg-draw { stroke-dashoffset: 0; }
+  .logo-reveal-group { clip-path: inset(0 0 0 0); }
 }
 
-@keyframes engrave-reveal {
+@keyframes logo-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes logo-reveal {
   to { clip-path: inset(0 0 0 0); }
-}
-
-@keyframes engrave-beam {
-  0% { left: 0%; opacity: 1; }
-  92% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
 }
 
 .nav-links {
@@ -330,19 +348,8 @@ button {
 .hero-logo {
   grid-column: 1 / -1;
   width: clamp(200px, 32vw, 340px);
-  aspect-ratio: 1320 / 1570;
+  aspect-ratio: 400 / 480;
   margin-bottom: var(--space-md);
-  border: 4px solid #F2EDE7;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .hero-logo .logo-mark-burn {
-    animation: engrave-reveal 3s ease-out 0.5s forwards;
-  }
-  .hero-logo::after {
-    animation: engrave-beam 3s ease-out 0.5s forwards;
-  }
 }
 
 .collage-1 { grid-column: span 3; aspect-ratio: 4 / 3; transform: rotate(-1deg); }
