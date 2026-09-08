@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Larry's Lasers</title>
+<meta name="description" content="Get in touch with Larry's Lasers for a quote or to place an order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">Larry<span>'</span>s Lasers</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="services.html">Services &amp; pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="section page-intro">
+    <div class="wrap">
+      <div class="section-head">
+        <h1>Contact</h1>
+        <p>Question, quote, or ready to order — here's how to reach out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap contact-grid">
+
+      <div class="contact-info">
+        <div class="info-row">
+          <h3>Phone</h3>
+          <p class="todo">1-888-999-9999</p>
+        </div>
+        <div class="info-row">
+          <h3>Email</h3>
+          <p class="todo">[add a real order/contact email]</p>
+        </div>
+        <div class="info-row">
+          <h3>Local area</h3>
+          <p>DeKalb / Sycamore</p>
+        </div>
+        <div class="info-row">
+          <h3>Turnaround</h3>
+          <p>1–2 business days locally; shipping adds time</p>
+        </div>
+      </div>
+
+      <div>
+        <form class="order-form" action="https://formspree.io/f/TODO-REPLACE-WITH-REAL-ID" method="POST">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-field">
+            <label for="details">What are you looking to get engraved?</label>
+            <textarea id="details" name="details" required placeholder="Item, material, quantity, and any design ideas..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send request</button>
+          <p class="todo form-note">This form isn't wired up yet — create a free account at formspree.io, grab your form ID, and swap it into the action attribute at the top of this form in contact.html.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Larry's Lasers — local laser engraving</span>
+    <span>&copy; 2026</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
