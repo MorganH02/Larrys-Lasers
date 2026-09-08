@@ -136,38 +136,33 @@ button {
   height: 72px;
 }
 
-.wordmark {
+.logo-mark {
   position: relative;
-  display: inline-block;
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
 }
 
-.wordmark-base {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--color-ink);
-  opacity: 0.4;
+.logo-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.wordmark-burn {
+.logo-mark-base {
+  opacity: 0.3;
+  filter: grayscale(35%);
+}
+
+.logo-mark-burn {
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--color-ink);
-  white-space: nowrap;
   clip-path: inset(0 100% 0 0);
 }
 
-.wordmark-base .accent-mark,
-.wordmark-burn .accent-mark {
-  color: var(--color-accent);
-  -webkit-text-stroke: 0;
-}
-
-.wordmark::after {
+.logo-mark::after {
   content: "";
   position: absolute;
   top: 0;
@@ -175,21 +170,27 @@ button {
   width: 2px;
   height: 100%;
   background: var(--color-accent);
-  box-shadow: 0 0 6px 1px var(--color-accent);
+  box-shadow: 0 0 8px 2px var(--color-accent);
   opacity: 0;
 }
 
+.nav-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 3px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .wordmark-burn {
+  .nav-logo .logo-mark-burn {
     animation: engrave-reveal 2.6s ease-out 0.15s forwards;
   }
-  .wordmark::after {
+  .nav-logo::after {
     animation: engrave-beam 2.6s ease-out 0.15s forwards;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wordmark-burn { clip-path: inset(0 0 0 0); }
+  .logo-mark-burn { clip-path: inset(0 0 0 0); }
 }
 
 @keyframes engrave-reveal {
@@ -326,6 +327,24 @@ button {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
 }
 
+.hero-logo {
+  grid-column: 1 / -1;
+  width: clamp(200px, 32vw, 340px);
+  aspect-ratio: 1320 / 1570;
+  margin-bottom: var(--space-md);
+  border: 4px solid #F2EDE7;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-logo .logo-mark-burn {
+    animation: engrave-reveal 3s ease-out 0.5s forwards;
+  }
+  .hero-logo::after {
+    animation: engrave-beam 3s ease-out 0.5s forwards;
+  }
+}
+
 .collage-1 { grid-column: span 3; aspect-ratio: 4 / 3; transform: rotate(-1deg); }
 .collage-2 { grid-column: span 3; aspect-ratio: 4 / 3; transform: rotate(1deg); }
 .collage-3 { grid-column: span 2; aspect-ratio: 1 / 1; transform: rotate(1.5deg); }
@@ -335,6 +354,7 @@ button {
 @media (max-width: 800px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-collage { order: -1; }
+  .hero-logo { order: -2; width: clamp(180px, 55vw, 300px); margin: 0 auto var(--space-md); }
 }
 
 /* ==========================================================================
