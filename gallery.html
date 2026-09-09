@@ -4,11 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery — D-Side Designs</title>
-<meta name="description" content="Recent laser engraving work — coasters, keychains, custom portraits, and more.">
+<meta name="description" content="Recent laser engraving work — coasters, signs, bookmarks, wood, slate, and acrylic.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .gallery-filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    margin-bottom:2rem;
+  }
+  .gallery-filters .btn{
+    padding:.5rem 1.1rem;
+    font-size:.9rem;
+    line-height:1;
+    cursor:pointer;
+  }
+  .gallery-item[hidden]{
+    display:none;
+  }
+</style>
 </head>
 <body>
 
@@ -57,41 +74,102 @@
 
   <section class="section" style="padding-top:0">
     <div class="wrap">
+
+      <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+        <button type="button" class="btn btn-primary filter-btn" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="btn btn-secondary filter-btn" data-filter="coasters" aria-pressed="false">Coasters</button>
+        <button type="button" class="btn btn-secondary filter-btn" data-filter="signs" aria-pressed="false">Signs</button>
+        <button type="button" class="btn btn-secondary filter-btn" data-filter="bookmarks" aria-pressed="false">Bookmarks</button>
+        <button type="button" class="btn btn-secondary filter-btn" data-filter="wood" aria-pressed="false">Wood</button>
+        <button type="button" class="btn btn-secondary filter-btn" data-filter="slate" aria-pressed="false">Slate</button>
+        <button type="button" class="btn btn-secondary filter-btn" data-filter="acrylic" aria-pressed="false">Acrylic</button>
+      </div>
+
       <div class="gallery-grid">
 
-        <figure class="gallery-item">
+        <figure class="gallery-item" data-category="coasters wood">
           <img src="coasters-wood.jpg" alt="Set of nine wood coasters, each engraved with a different stylized portrait and a number">
           <figcaption>Numbered coaster set — wood</figcaption>
         </figure>
 
-        <figure class="gallery-item">
+        <figure class="gallery-item" data-category="coasters slate">
           <img src="coasters-slate.jpg" alt="Six round slate coasters, each engraved with a detailed portrait design">
           <figcaption>Coasters — slate</figcaption>
         </figure>
 
-        <figure class="gallery-item">
-          <img src="bookmarks-acrylic.jpg" alt="Two dark acrylic bookmarks engraved with detailed fantasy line art">
-          <figcaption>Bookmarks — acrylic</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
+        <figure class="gallery-item" data-category="coasters slate">
           <img src="coasters-slate-mushroom.jpg" alt="Slate coaster engraved with a detailed mushroom and botanical illustration">
           <figcaption>Coasters — slate</figcaption>
         </figure>
 
-        <figure class="gallery-item">
+        <figure class="gallery-item" data-category="coasters slate">
           <img src="coasters-slate-car.jpg" alt="Slate coaster engraved with a classic sports car">
           <figcaption>Coasters — slate</figcaption>
         </figure>
 
-        <figure class="gallery-item">
+        <figure class="gallery-item" data-category="coasters slate">
           <img src="coasters-slate-anime.jpg" alt="Four round slate coasters engraved with anime character illustrations">
           <figcaption>Coasters — slate</figcaption>
         </figure>
 
-        <figure class="gallery-item">
+        <figure class="gallery-item" data-category="coasters slate">
+          <img src="coasters-slate-harley.jpg" alt="Round slate coaster engraved with a vintage motorcycle, wings, and skull design">
+          <figcaption>Coasters — slate</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="coasters slate">
+          <img src="coasters-slate-deadpool.jpg" alt="Square slate coaster engraved with two chibi-style comic-book characters">
+          <figcaption>Coasters — slate</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="coasters slate">
+          <img src="coasters-slate-pirate.jpg" alt="Round slate coaster engraved with a pirate skull, rum bottle, and tiki design">
+          <figcaption>Coasters — slate</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="coasters wood">
+          <img src="coasters-wood-leaf.jpg" alt="Square bamboo coaster engraved with a large leaf illustration and the D-Side Designs logo">
+          <figcaption>Coasters — wood</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="coasters slate">
+          <img src="coasters-slate-psychedelic.jpg" alt="Square slate coaster engraved with a psychedelic skull and mushroom illustration">
+          <figcaption>Coasters — slate</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="coasters slate">
+          <img src="coasters-slate-oldfashioned.jpg" alt="Round slate coaster engraved with an Old Fashioned cocktail illustration">
+          <figcaption>Coasters — slate</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="coasters slate">
+          <img src="coasters-slate-scifi.jpg" alt="Pair of square slate coasters engraved with sci-fi bounty-hunter and starship designs">
+          <figcaption>Coasters — slate</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="coasters wood">
+          <img src="coasters-wood-therapy.jpg" alt="Square wood coaster hand-lettered with a lighthearted phrase and a heart">
+          <figcaption>Coasters — wood</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="signs wood">
           <img src="sign-wood-dog.jpg" alt="Wood sign engraved with a dog in a lab coat and a joke about food safety testing">
           <figcaption>Custom sign — wood</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="signs wood">
+          <img src="sign-wood-dogmom.jpg" alt="Three-panel wood sign with a stacked, playful message for dog owners">
+          <figcaption>Custom sign — wood</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="signs wood">
+          <img src="sign-wood-haunted.jpg" alt="Wood paddle sign engraved with a haunted house scene and a warning phrase">
+          <figcaption>Custom sign — wood</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-category="bookmarks acrylic">
+          <img src="bookmarks-acrylic.jpg" alt="Two dark acrylic bookmarks engraved with detailed fantasy line art">
+          <figcaption>Bookmarks — acrylic</figcaption>
         </figure>
 
       </div>
@@ -118,5 +196,29 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var buttons = document.querySelectorAll('.gallery-filters .filter-btn');
+  var items = document.querySelectorAll('.gallery-item');
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = btn.getAttribute('data-filter');
+
+      buttons.forEach(function (b) {
+        var active = (b === btn);
+        b.classList.toggle('btn-primary', active);
+        b.classList.toggle('btn-secondary', !active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+
+      items.forEach(function (item) {
+        var cats = (item.getAttribute('data-category') || '').split(' ');
+        item.hidden = !(filter === 'all' || cats.indexOf(filter) !== -1);
+      });
+    });
+  });
+});
+</script>
 </body>
 </html>
