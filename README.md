@@ -41,9 +41,9 @@ script.js       Mobile nav behavior
 ## Roadmap
 
 - [x] **Phase 1** — Static site, fully built and live
-- [ ] **Phase 2** — Reveal to Owner, swap in his final photos/copy/feedback
-- [ ] **Phase 3** — Flask backend, database-backed order storage, real email notifications
-- [ ] **Phase 4** — Portfolio case study (see `CASE-STUDY.md`)
+- [x] **Phase 2** — Reveal to Owner, swap in his final photos/copy/feedback
+- [x] **Phase 3** — Flask backend, database-backed order storage, real email notifications
+- [x] **Phase 4** — Portfolio case study (see `CASE-STUDY.md`)
 
 ## Built with
 
